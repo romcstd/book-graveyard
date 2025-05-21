@@ -23,13 +23,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-[family-name:var(--font-geist-mono)]`}
       >
-        <header className="p-4 sm:p-8">
-          <div className="pb-4 sm:pb-8">
-            <div className="flex items-end pb-2">
-              <div className="text-5xl font-bold"><Link href={"/"}>BOOK GRAVEYARD</Link></div>
-              <div className="font-bold ml-auto">EST. April 24, 2025</div>
+        <header className="px-4 sm:px-8 py-8">
+          <div className="pb-8">
+            <div className="flex items-center sm:items-end pb-4">
+              <div className="text-xl sm:text-5xl font-bold"><Link href={"/"}>BOOK GRAVEYARD</Link></div>
+              <div className="font-bold ml-auto text-sm sm:text-base">EST. April 24, 2025</div>
             </div>
-            <div className="italic">"Where ideas come to die. We are not trying to change the world, just trying to change your mind."</div>
+            <div className="italic text-sm sm:text-base text-center sm:text-start">"Where ideas come to die. We are not trying to change the world, just trying to change your mind."</div>
           </div>
           <div className="block sm:flex justify-center gap-8 text-center">
             <Link className="block" href={"/current-book-we-are-reading"}>Current Book We Are Reading</Link>
