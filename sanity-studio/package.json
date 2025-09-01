@@ -5,7 +5,7 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity dev --open",
+    "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
@@ -16,13 +16,10 @@
   ],
   "dependencies": {
     "@sanity/vision": "^4.6.0",
-    "@tailwindcss/postcss": "^4.1.12",
-    "autoprefixer": "^10.4.21",
     "react": "^19.1",
     "react-dom": "^19.1",
     "sanity": "^4.6.0",
-    "styled-components": "^6.1.18",
-    "tailwindcss": "^4.1.12"
+    "styled-components": "^6.1.18"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^5.0.2",
