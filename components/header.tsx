@@ -11,7 +11,7 @@ export default function Header() {
                         </h1>
                     </Link>
                 </div>
-                <p className="italic text-sm sm:text-base text-center">"Where ideas come to die. We are not trying to change the world, just trying to change your mind."</p>
+                <p className="italic text-sm sm:text-base text-center">&quot;Where ideas come to die. We are not trying to change the world, just trying to change your mind.&quot;</p>
             </div>
             <nav className="border-t-2 border-primary/20 bg-card">
                 <div className="container mx-auto px-4">
