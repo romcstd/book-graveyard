@@ -10,7 +10,7 @@ export function Header() {
                     <div className="w-16 h-0.5 bg-black"></div>
                 </div>
                 <div className="text-center mb-4">
-                    <Link href="/">
+                    <Link href={"/"}>
                         <h1 className="font-playfair font-black text-4xl md:text-6xl text-primary hover:text-primary/80 transition-colors cursor-pointer">
                             Book Graveyard
                         </h1>
