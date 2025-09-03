@@ -10,22 +10,21 @@ interface BookCardProps {
 
 export function RecentBooksCard({ book }: BookCardProps) {
     return (
-        <Card>
-            <div className="grid grid-cols-1 md:grid-cols-3 items-center">
-                <div className="p-4 mx-auto">
+        <Card className="py-0">
+            <div className="flex flex-col sm:flex-row">
+                <div className="relative aspect-[3/4] w-full max-w-32 sm:max-w-64 h-auto mx-auto sm:mx-0 mt-4 sm:mt-0">
                     <Image
                         src={book.image}
                         alt={book.title}
                         priority
-                        width={256}
-                        height={256}
-                        className="rounded-lg object-cover"
+                        fill
+                        className="object-center object-fill rounded-xl"
                     />
                 </div>
-                <div className="w-full flex flex-col justify-center text-center md:text-left gap-4 md:col-span-2">
-                    <CardHeader className="mb-4">
+                <div className="w-full flex flex-col justify-center text-center sm:text-left gap-4 xl:gap-8 py-4 sm:py-0">
+                    <CardHeader>
                         {book.genre && (
-                            <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-2">
+                            <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-2">
                                 {book.genre.map((g) => (
                                     <span
                                         key={g}
@@ -40,11 +39,11 @@ export function RecentBooksCard({ book }: BookCardProps) {
                         <h2 className="font-playfair font-black text-2xl md:text-3xl">{book.title}</h2>
                         <p>{book.author}</p>
                     </CardHeader>
-                    <CardContent className="mb-4">
+                    <CardContent>
                         <p className="text-sm text-gray-600">{book.description}</p>
                     </CardContent>
-                    <CardFooter className="justify-center md:justify-start">
-                        <Button asChild>
+                    <CardFooter>
+                        <Button asChild className="w-full sm:w-auto">
                             <Link href={"/"}>Read More</Link>
                         </Button>
                     </CardFooter>

@@ -6,9 +6,11 @@ export default function HomePage() {
     <>
       <main>
         <HeroSection />
-        <div className="container mx-auto sm:px-8 sm:py-8 grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <RecentBooks />
-          <Reviewers />
+        <div className="relative px-8 sm:px-16 sm:py-8 ">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <RecentBooks />
+            <Reviewers />
+          </div>
         </div>
       </main>
     </>
