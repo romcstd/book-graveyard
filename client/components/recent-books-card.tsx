@@ -11,14 +11,14 @@ interface BookCardProps {
 export function RecentBooksCard({ book }: BookCardProps) {
     return (
         <Card className="py-0">
-            <div className="flex flex-col sm:flex-row">
-                <div className="relative aspect-[3/4] w-full max-w-32 sm:max-w-64 h-auto mx-auto sm:mx-0 mt-4 sm:mt-0">
+            <div className="flex flex-col sm:flex-row py-4 sm:p-8">
+                <div className="relative aspect-[2/3] w-full max-w-48 sm:max-w-64 h-auto mx-auto sm:mx-0 mt-4 sm:mt-0">
                     <Image
                         src={book.image}
                         alt={book.title}
                         priority
                         fill
-                        className="object-center object-fill rounded-xl"
+                        className="object-center object-contain rounded-xl"
                     />
                 </div>
                 <div className="w-full flex flex-col justify-center text-center sm:text-left gap-4 xl:gap-8 py-4 sm:py-0">
