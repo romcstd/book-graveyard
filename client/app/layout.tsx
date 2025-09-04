@@ -1,7 +1,8 @@
 import { Playfair_Display, Inter } from "next/font/google";
-import { Suspense } from "react"
+import { Suspense } from "react";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
@@ -24,14 +25,15 @@ export const metadata = {
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" app-version="0.0.7" suppressHydrationWarning>
+    <html lang="en" app-version="0.0.8" suppressHydrationWarning>
       <body
         className={`${playfairDisplay.variable} ${inter.variable} antialiased`}
       >
         <Header />
-        <main>
+        <main className="px-8 sm:px-16 3xl:px-32">
           <Suspense fallback={null}>{children}</Suspense>
         </main>
+        <Footer />
       </body>
     </html>
   );

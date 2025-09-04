@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+
 export function Header() {
     return (
-        <header className="relative px-8 sm:px-16 lg:px-32 py-8">
+        <header className="relative px-8 sm:px-16 3xl:px-32 py-8">
             <div className="pb-8">
                 <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="w-16 h-0.5 bg-black"></div>
@@ -18,7 +19,7 @@ export function Header() {
                 </div>
                 <p className="text-zinc-400 italic text-sm sm:text-base text-center">&quot;Where ideas come to die. We are not trying to change the world, just trying to change your mind.&quot;</p>
             </div>
-            <nav className="border-t-2 border-b-2 border-primary/20 bg-card">
+            <nav className="border-t border-b border-primary/20 bg-card">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-center py-4">
                         <div className="flex flex-col sm:flex-row items-center text-center lg:space-x-8">
