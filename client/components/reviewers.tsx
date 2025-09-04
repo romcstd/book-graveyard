@@ -1,5 +1,6 @@
-import { reviewers } from "@/lib/reviewers"
-import { ReviewersCard } from "./reviewers-card"
+import { reviewers } from "@/lib/reviewers";
+import { ReviewersCard } from "./reviewers-card";
+
 export function Reviewers() {
     return (
         <section className="relative space-y-8">

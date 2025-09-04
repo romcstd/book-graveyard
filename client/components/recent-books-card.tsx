@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge"
-import { Book } from "@/types/book"
+import { Badge } from "@/components/ui/badge";
+import { Book } from "@/types/book";
 
 interface BookCardProps {
     book: Book
