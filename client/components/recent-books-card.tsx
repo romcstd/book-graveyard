@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
-import { Button } from "./ui/button";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge"
 import { Book } from "@/types/book"
 
 interface BookCardProps {
@@ -12,7 +13,7 @@ export function RecentBooksCard({ book }: BookCardProps) {
     return (
         <Card className="py-0">
             <div className="flex flex-col sm:flex-row py-4 sm:p-8">
-                <div className="relative aspect-[2/3] w-full max-w-48 sm:max-w-64 h-auto mx-auto sm:mx-0 mt-4 sm:mt-0">
+                <div className="relative aspect-[2/3] w-full max-w-48 sm:max-w-32 h-auto mx-auto sm:mx-0 mt-4 sm:mt-0">
                     <Image
                         src={book.image}
                         alt={book.title}
@@ -21,29 +22,29 @@ export function RecentBooksCard({ book }: BookCardProps) {
                         className="object-center object-contain rounded-xl"
                     />
                 </div>
-                <div className="w-full flex flex-col justify-center text-center sm:text-left gap-4 xl:gap-8 py-4 sm:py-0">
+                <div className="w-full flex flex-col justify-center text-center sm:text-left gap-4 py-4 sm:py-0">
                     <CardHeader>
                         {book.genre && (
                             <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-2">
-                                {book.genre.map((g) => (
-                                    <span
-                                        key={g}
-                                        className="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700"
+                                {book.genre?.map((genre) => (
+                                    <Badge
+                                        key={genre}
+                                        variant="secondary"
                                     >
-                                        {g}
-                                    </span>
+                                        {genre}
+                                    </Badge>
                                 ))}
                             </div>
                         )}
 
-                        <h2 className="font-playfair font-black text-2xl md:text-3xl">{book.title}</h2>
-                        <p>{book.author}</p>
+                        <h2 className="font-bold text-xl">{book.title}</h2>
+                        <p className="text-sm text-muted-foreground">{book.author}</p>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-sm text-gray-600">{book.description}</p>
+                        <p className="text-sm text-muted-foreground">{book.description}</p>
                     </CardContent>
                     <CardFooter>
-                        <Button asChild className="w-full sm:w-auto">
+                        <Button asChild variant="outline" size="sm" className="w-full sm:w-auto">
                             <Link href={"/"}>Read More</Link>
                         </Button>
                     </CardFooter>

@@ -26,4 +26,4 @@ export const books: Book[] = [
         image: "/recent-books/book-cover-3.jpg",
         genre: ["Science Fiction", "Literary Fiction"],
     },
-]
+];
