@@ -1,7 +1,8 @@
-export interface Book {
+export interface Reviewer {
   id: number;
+  name: string;
+  initials: string;
   title: string;
-  author: string;
   description: string;
   image: string;
   genre?: string[];

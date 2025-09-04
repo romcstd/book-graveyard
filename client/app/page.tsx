@@ -6,7 +6,7 @@ export default function HomePage() {
     <>
       <main>
         <HeroSection />
-        <div className="relative px-8 sm:px-16 sm:py-8 ">
+        <div className="relative px-8 sm:px-16 lg:px-32 sm:py-8">
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-12">
             <RecentBooks />
             <Reviewers />
