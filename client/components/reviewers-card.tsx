@@ -1,8 +1,8 @@
-import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card"
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Reviewer } from "@/types/reviewer"
+import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Reviewer } from "@/types/reviewer";
 
 interface ReviewerCardProps {
     reviewer: Reviewer
@@ -27,7 +27,7 @@ export function ReviewersCard({ reviewer }: ReviewerCardProps) {
                 <p className="text-sm text-muted-foreground mb-4">
                     {reviewer.description}
                 </p>
-                <div className="flex gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-3">
                     {reviewer.genre?.map((genre) => (
                         <Badge key={genre} variant="outline" className="text-xs">
                             {genre}

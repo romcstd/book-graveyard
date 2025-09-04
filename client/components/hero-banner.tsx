@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Image from "next/image";
+
 export function HeroSection() {
     return (
         <section className="relative h-[300px] md:h-[600px] w-full">
