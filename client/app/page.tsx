@@ -12,7 +12,7 @@ export default function HomePage() {
           <RecentBooks />
         </div>
         <div className="space-y-12">
-          <HeroSectionBanner className="hidden lg:block" />
+          <HeroSectionBanner className="hidden lg:block" publish="Published on 4/21/25" />
           <Reviewers />
         </div>
       </div>
