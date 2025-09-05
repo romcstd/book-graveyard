@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -14,7 +15,7 @@ export function ReviewersCard({ reviewer }: ReviewerCardProps) {
             <CardHeader className="p-0 mb-4">
                 <div className="flex items-center space-x-4">
                     <Avatar className="h-16 w-16">
-                        <AvatarImage src={reviewer.image} alt={reviewer.name} />
+                        <AvatarImage src={reviewer.avatar} alt={reviewer.name} />
                         <AvatarFallback className="text-lg font-semibold">EM</AvatarFallback>
                     </Avatar>
                     <div>
@@ -35,7 +36,9 @@ export function ReviewersCard({ reviewer }: ReviewerCardProps) {
                     ))}
                 </div>
                 <Button variant="ghost" size="sm" className="p-0 h-auto text-primary">
-                    Read More →
+                    <Link href={`/reviewers/${reviewer.slug}`}>
+                        Read More →
+                    </Link>
                 </Button>
             </CardContent>
         </Card>
