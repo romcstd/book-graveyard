@@ -46,7 +46,7 @@ export function Header() {
                                 variant="ghost"
                                 className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
                             >
-                                <Link className="block" href={"/about-ella"}>
+                                <Link className="block" href={"/reviewers/ella-mabini"}>
                                     About Ella
                                 </Link>
                             </Button>
@@ -55,7 +55,7 @@ export function Header() {
                                 variant="ghost"
                                 className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
                             >
-                                <Link className="block" href={"/about-jamie"}>
+                                <Link className="block" href={"/reviewers/jamie-rebugio"}>
                                     About Jamie
                                 </Link>
                             </Button>
