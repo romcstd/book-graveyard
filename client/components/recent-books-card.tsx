@@ -43,7 +43,7 @@ export function RecentBooksCard({ book }: BookCardProps) {
                 </CardContent>
                 <CardFooter className="px-4 pb-4 mt-auto">
                     <Button asChild variant="link" size="sm" className="p-0 h-auto">
-                        <Link href={"/"} >Read More</Link>
+                        <Link href={`/books/${book.slug}`} >Read More</Link>
                     </Button>
                 </CardFooter>
             {/* </div> */}

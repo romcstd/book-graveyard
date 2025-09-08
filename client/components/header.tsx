@@ -37,7 +37,7 @@ export function Header() {
                                 variant="ghost"
                                 className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
                             >
-                                <Link className="block" href={"/books-we-read"}>
+                                <Link className="block" href={"/books"}>
                                     Books We Read
                                 </Link>
                             </Button>
