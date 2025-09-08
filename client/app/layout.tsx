@@ -25,12 +25,12 @@ export const metadata = {
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" app-version="0.0.9" suppressHydrationWarning>
+    <html lang="en" app-version="0.0.10" suppressHydrationWarning>
       <body
         className={`${playfairDisplay.variable} ${inter.variable} antialiased`}
       >
         <Header />
-        <main className="px-8 sm:px-16 3xl:px-32">
+        <main className="px-8 sm:px-12 3xl:px-24">
           <Suspense fallback={null}>{children}</Suspense>
         </main>
         <Footer />

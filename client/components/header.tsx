@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export function Header() {
     return (
-        <header className="relative px-8 sm:px-16 3xl:px-32 py-8">
+        <header className="relative px-8 sm:px-12 3xl:px-24 py-8">
             <div className="pb-8">
                 <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="w-16 h-0.5 bg-black"></div>

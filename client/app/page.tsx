@@ -6,13 +6,13 @@ import { Reviewers } from "@/components/reviewers";
 export default function HomePage() {
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 space-y-12">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-16 xl:gap-8">
+        <div className="xl:col-span-2 space-y-12">
           <HeroSection />
           <RecentBooks />
         </div>
         <div className="space-y-12">
-          <HeroSectionBanner className="hidden lg:block" publish="Published on 4/21/25" />
+          <HeroSectionBanner className="hidden xl:block" publishDate="Published on 4/21/25" />
           <Reviewers />
         </div>
       </div>
