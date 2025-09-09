@@ -3,7 +3,7 @@ import { HeroSectionBanner } from "./hero-section-banner";
 export function HeroSection() {
     return (
         <section className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm leading-relaxed text-muted-foreground">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 leading-relaxed text-muted-foreground">
                 <div className="md:col-span-2">
                     <h2 className="font-playfair font-black text-4xl md:text-6xl text-primary">
                         Tidal Quiet: A Novel That Whispers and Still Hits Like a Wave

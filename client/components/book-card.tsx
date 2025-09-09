@@ -1,5 +1,6 @@
 'use client';
 
+import Link from "next/link";
 import { Book } from '@/types/book';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -24,10 +25,10 @@ export function BookCard({ book, layout, index }: BookCardProps) {
             <Star
                 key={i}
                 className={`h-4 w-4 ${i < fullStars
-                        ? 'fill-yellow-400 text-yellow-400'
-                        : i === fullStars && hasHalfStar
-                            ? 'fill-yellow-200 text-yellow-400'
-                            : 'text-gray-300'
+                    ? 'fill-yellow-400 text-yellow-400'
+                    : i === fullStars && hasHalfStar
+                        ? 'fill-yellow-200 text-yellow-400'
+                        : 'text-gray-300'
                     }`}
             />
         ));
@@ -72,7 +73,7 @@ export function BookCard({ book, layout, index }: BookCardProps) {
                 <div className="flex flex-wrap gap-2 mb-4">
                     <Badge variant="secondary" className="flex items-center gap-1 text-xs">
                         <FileText className="h-3 w-3" />
-                        {book.pages}p
+                        {book.pages} page
                     </Badge>
                     {book.genre && book.genre.map((genre, index) => (
                         <Badge key={index} variant="secondary" className="flex items-center gap-1 text-xs">
@@ -96,11 +97,10 @@ export function BookCard({ book, layout, index }: BookCardProps) {
                 </p>
 
                 <div className="flex gap-2">
-                    <Button className="flex-1 bg-gray-900 hover:bg-gray-800">
-                        Read More
-                    </Button>
-                    <Button variant="outline" className="flex-1">
-                        Save
+                    <Button asChild variant="outline">
+                        <Link href="#">
+                            Read More
+                        </Link>
                     </Button>
                 </div>
             </div>
