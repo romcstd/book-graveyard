@@ -9,7 +9,7 @@ interface ReviewerCardProps {
     reviewer: Reviewer
 }
 
-export function ReviewersCard({ reviewer }: ReviewerCardProps) {
+export function ReviewerCard({ reviewer }: ReviewerCardProps) {
     return (
         <Card className="p-6 gap-0">
             <CardHeader className="p-0 mb-4">

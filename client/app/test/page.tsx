@@ -1,8 +1,8 @@
-import { Books } from "@/components/books";
+import { TestBooks } from "@/components/test-books";
 export default function TestPage() {
     return (
         <>
-        <Books />
+        <TestBooks />
         </>
     )
 }

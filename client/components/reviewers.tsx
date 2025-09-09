@@ -1,5 +1,5 @@
 import { reviewers } from "@/lib/reviewers";
-import { ReviewersCard } from "./reviewers-card";
+import { ReviewerCard } from "./reviewer-card";
 
 export function Reviewers() {
     return (
@@ -10,7 +10,7 @@ export function Reviewers() {
             </div>
             <div className="flex flex-col lg:flex-row xl:flex-col gap-4">
                 {reviewers.map((reviewer) => (
-                    <ReviewersCard reviewer={reviewer} key={reviewer.id} />
+                    <ReviewerCard reviewer={reviewer} key={reviewer.id} />
                 ))}
             </div>
         </section>
