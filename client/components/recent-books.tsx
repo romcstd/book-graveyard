@@ -1,5 +1,5 @@
 import { books } from "@/lib/books";
-import { RecentBooksCard } from "./recent-books-card";
+import { BookCard } from "./book-card"
 
 export function RecentBooks() {
     return (
@@ -10,7 +10,7 @@ export function RecentBooks() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {books.slice(-3).map((book) => (
-                    <RecentBooksCard book={book} key={book.id} />
+                    <BookCard key={book.id} book={book} />
                 ))}
             </div>
         </section>
