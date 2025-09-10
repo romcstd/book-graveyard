@@ -9,7 +9,9 @@ export const books: Book[] = [
         pages: 311,
         description: "The Handmaid's Tale is a futuristic dystopian novel by Canadian author Margaret Atwood published in 1985. It is set in a near-future New England in a patriarchal, totalitarian theonomic state known as the Republic of Gilead, which has overthrown the United States government.",
         image: "/books/the-handmaids-tale-by-margaret-atwood.jpg",
+        imageDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         genre: ["Novel", "Science fiction", "Speculative fiction", "Dystopian Fiction", "Fantasy Fiction", "Tragedy", "Feminist science fiction"],
+        rating: 4.5,
     },
     {
         id: 2,
@@ -19,7 +21,9 @@ export const books: Book[] = [
         pages: 230,
         description: "The Mist is a science fiction psychological horror novella by American author Stephen King. First published by Viking Press in 1980 as part of the Dark Forces anthology, an edited version was subsequently included in King's 1985 collection Skeleton Crew.",
         image: "/books/the-mist-by-stephen-king.jpg",
+        imageDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         genre: ["Horror fiction", "Novel", "Novella", "Science fiction"],
+        rating: 4.6,
     },
     {
         id: 3,
@@ -29,7 +33,9 @@ export const books: Book[] = [
         pages: 304,
         description: "Normal People is a 2018 novel by the Irish author Sally Rooney. Normal People is Rooney's second novel, published after Conversations with Friends. It was first published by Faber & Faber on 30 August 2018.",
         image: "/books/normal-people-by-sally-rooney.jpg",
+        imageDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         genre: ["Novel", "Literary fiction"],
+        rating: 4.7,
     },
     {
         id: 4,
@@ -39,7 +45,9 @@ export const books: Book[] = [
         pages: 368,
         description: "Sense and Sensibility is the first novel by the English author Jane Austen, published in 1811. It was published anonymously: By A Lady appears on the title page where the author's name might have been.",
         image: "/books/sense-and-sensibility-by-jane-austen.jpg",
+        imageDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         genre: ["Novel", "Romance novel", "Fiction"],
+        rating: 4.8,
     },
     {
         id: 5,
@@ -49,7 +57,9 @@ export const books: Book[] = [
         pages: 304,
         description: "The Midnight Library is a fantasy novel by Matt Haig, published on 13 August 2020 by Canongate Books. It was abridged and broadcast on BBC Radio 4 over ten episodes in December 2020.",
         image: "/books/the-midnight-library-by-matt-haig.jpg",
+        imageDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         genre: ["Science fiction", "Fantasy Fiction", "Philosophical fiction"],
+        rating: 4.9,
     },
     {
         id: 6,
@@ -59,6 +69,8 @@ export const books: Book[] = [
         pages: 312,
         description: "The Graveyard Book is a young adult novel written by the English author Neil Gaiman, simultaneously published in the United Kingdom and in the United States in 2008.",
         image: "/books/the-graveyard-book-by-neil-gaiman.jpg",
+        imageDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         genre: ["Novel", "Fantasy Fiction", "Horror fiction", "Young adult literature", "Paranormal fiction"],
+        rating: 5.0,
     },
 ];

@@ -26,10 +26,10 @@ export function BookCard({ book }: BookCardProps) {
                 </div>
             </CardHeader>
             <CardContent className="px-4">
-                <h2 className="font-bold text-xl mb-2">{book.title}</h2>
-                <p className="text-sm text-muted-foreground mb-4">by {book.author}</p>
+                <h2 className="font-serif font-bold text-xl mb-2">{book.title}</h2>
+                <p className="font-serif text-muted-foreground mb-4 uppercase">by {book.author}</p>
                 {book.genre && (
-                    <div className="flex flex-wrap justify-center sm:justify-start gap-2 mb-4">
+                    <div className="font-serif flex flex-wrap justify-center sm:justify-start gap-2 mb-4">
                         <Badge variant="outline" className="flex items-center gap-1 text-xs">
                             <FileText className="h-3 w-3" />
                             {book.pages} pages
@@ -42,7 +42,7 @@ export function BookCard({ book }: BookCardProps) {
                         ))}
                     </div>
                 )}
-                <p className="text-muted-foreground leading-relaxed">{book.description}</p>
+                <p className="font-serif text-muted-foreground leading-relaxed">{book.description}</p>
             </CardContent>
             <CardFooter className="px-4 pb-4 mt-auto">
                 <Button asChild variant="outline">

@@ -19,16 +19,16 @@ export function ReviewerCard({ reviewer }: ReviewerCardProps) {
                         <AvatarFallback className="text-lg font-semibold">EM</AvatarFallback>
                     </Avatar>
                     <div>
-                        <CardTitle className="text-lg">{reviewer.name}</CardTitle>
-                        <CardDescription>{reviewer.title}</CardDescription>
+                        <CardTitle className="text-lg font-serif">{reviewer.name}</CardTitle>
+                        <CardDescription className="font-serif">{reviewer.title}</CardDescription>
                     </div>
                 </div>
             </CardHeader>
             <CardContent className="p-0">
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="font-serif text-muted-foreground mb-4">
                     {reviewer.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="font-serif flex flex-wrap gap-2 mb-3">
                     {reviewer.genre?.map((genre) => (
                         <Badge key={genre} variant="outline" className="text-xs">
                             {genre}
