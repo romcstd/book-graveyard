@@ -1,7 +1,6 @@
 export function Footer() {
     return (
-        <footer className="relative px-8 sm:px-12 3xl:px-24 bg-card mt-16">
-            <div className="container mx-auto px-4 py-12">
+        <footer className="relative mt-16 px-8 sm:px-12 3xl:px-24 bg-card">
                 {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                     <div className="space-y-4">
@@ -47,13 +46,12 @@ export function Footer() {
                     </div>
                 </div> */}
 
-                <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div className="border-t border-border py-8 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-xs text-muted-foreground">© 2024 Book Graveyard. All rights reserved.</p>
                     <p className="text-xs text-muted-foreground italic mt-2 md:mt-0">
                         &quot;Every book deserves a proper burial in memory.&quot;
                     </p>
                 </div>
-            </div>
         </footer>
     )
 };
