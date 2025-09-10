@@ -30,7 +30,7 @@ export function Books() {
 
             return filterSearch && filterGenre;
         });
-    }, [books, search, selectedGenre]);
+    }, [search, selectedGenre]);
 
     const allGenres = useMemo(() => {
         const genreSet = new Set<string>();
