@@ -7,7 +7,7 @@ export function Header() {
             <div className="pb-8">
                 <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="w-16 h-0.5 bg-black"></div>
-                    <span className="newspaper-byline text-xs">EST. 2024</span>
+                    <span className="text-xs">EST. 2024</span>
                     <div className="w-16 h-0.5 bg-black"></div>
                 </div>
                 <div className="text-center mb-4">
@@ -17,16 +17,16 @@ export function Header() {
                         </h1>
                     </Link>
                 </div>
-                <p className="text-zinc-400 italic text-sm sm:text-base text-center">&quot;Where ideas come to die. We are not trying to change the world, just trying to change your mind.&quot;</p>
+                <p className="font-serif text-muted-foreground italic text-sm sm:text-base text-center">&quot;Where ideas come to die. We are not trying to change the world, just trying to change your mind.&quot;</p>
             </div>
-            <nav className="border-t border-b border-primary/20 bg-card">
+            <nav className="border-t border-b border-primary/20">
                 <div className="container mx-auto px-4">
                     <div className="flex items-center justify-center py-4">
                         <div className="flex flex-col sm:flex-row items-center text-center lg:space-x-8">
                             <Button
                                 asChild
                                 variant="ghost"
-                                className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
+                                className="hover:text-primary hover:bg-primary/10 transition-colors"
                             >
                                 <Link className="block" href={"/current-book-we-are-reading"}>
                                     Current Book We Are Reading
@@ -35,7 +35,7 @@ export function Header() {
                             <Button
                                 asChild
                                 variant="ghost"
-                                className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
+                                className="hover:text-primary hover:bg-primary/10 transition-colors"
                             >
                                 <Link className="block" href={"/books"}>
                                     Books We Read
@@ -44,7 +44,7 @@ export function Header() {
                             <Button
                                 asChild
                                 variant="ghost"
-                                className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
+                                className="hover:text-primary hover:bg-primary/10 transition-colors"
                             >
                                 <Link className="block" href={"/reviewers/ella-mabini"}>
                                     About Ella
@@ -53,7 +53,7 @@ export function Header() {
                             <Button
                                 asChild
                                 variant="ghost"
-                                className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
+                                className="hover:text-primary hover:bg-primary/10 transition-colors"
                             >
                                 <Link className="block" href={"/reviewers/jamie-rebugio"}>
                                     About Jamie
@@ -62,7 +62,7 @@ export function Header() {
                             <Button
                                 asChild
                                 variant="ghost"
-                                className="newspaper-byline hover:text-primary hover:bg-primary/10 transition-colors"
+                                className="hover:text-primary hover:bg-primary/10 transition-colors"
                             >
                                 <Link className="block" href={"/newsletter"}>
                                     Newsletter
