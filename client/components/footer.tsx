@@ -1,9 +1,9 @@
 export function Footer() {
     return (
-        <footer className="relative px-8 sm:px-12 3xl:px-24 border-t border-border bg-card mt-16">
+        <footer className="relative px-8 sm:px-12 3xl:px-24 bg-card mt-16">
             <div className="container mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Brand Section */}
+                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
                     <div className="space-y-4">
                         <h3 className="text-lg font-bold text-foreground">Book Graveyard</h3>
                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -13,7 +13,6 @@ export function Footer() {
                         <p className="text-xs text-muted-foreground">Est. 2024</p>
                     </div>
 
-                    {/* Navigation Links */}
                     <div className="space-y-4">
                         <h4 className="text-sm font-semibold text-foreground">Explore</h4>
                         <nav className="flex flex-col space-y-2 text-sm">
@@ -32,7 +31,6 @@ export function Footer() {
                         </nav>
                     </div>
 
-                    {/* Connect Section */}
                     <div className="space-y-4">
                         <h4 className="text-sm font-semibold text-foreground">Connect</h4>
                         <div className="flex flex-col space-y-2 text-sm">
@@ -47,9 +45,8 @@ export function Footer() {
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                {/* Bottom Section */}
                 <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-xs text-muted-foreground">© 2024 Book Graveyard. All rights reserved.</p>
                     <p className="text-xs text-muted-foreground italic mt-2 md:mt-0">
