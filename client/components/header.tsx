@@ -1,10 +1,12 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { DesktopMenu } from "@/components/desktop-menu";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export function Header() {
     return (
-        <header className="relative px-8 sm:px-12 3xl:px-24 py-8">
-            <div className="pb-8">
+        <header className="bg-background sticky top-0 z-50 w-full lg:relative px-6 pt-4 lg:pt-8 sm:px-12 3xl:px-24">
+            <div>
+                <MobileMenu />
                 <div className="flex items-center justify-center gap-4 mb-4">
                     <div className="w-16 h-0.5 bg-black"></div>
                     <span className="text-xs">EST. 2024</span>
@@ -17,61 +19,9 @@ export function Header() {
                         </h1>
                     </Link>
                 </div>
-                <p className="font-serif text-muted-foreground italic text-sm sm:text-base text-center">&quot;Where ideas come to die. We are not trying to change the world, just trying to change your mind.&quot;</p>
+                <p className="font-serif text-muted-foreground italic text-sm sm:text-base text-center mb-4">&quot;Where ideas come to die. We are not trying to change the world, just trying to change your mind.&quot;</p>
             </div>
-            <nav className="border-t border-b border-primary/20">
-                <div className="container mx-auto px-4">
-                    <div className="flex items-center justify-center py-4">
-                        <div className="flex flex-col sm:flex-row items-center text-center lg:space-x-8">
-                            <Button
-                                asChild
-                                variant="ghost"
-                                className="hover:text-primary hover:bg-primary/10 transition-colors"
-                            >
-                                <Link className="block" href={"/current-book-we-are-reading"}>
-                                    Current Book We Are Reading
-                                </Link>
-                            </Button>
-                            <Button
-                                asChild
-                                variant="ghost"
-                                className="hover:text-primary hover:bg-primary/10 transition-colors"
-                            >
-                                <Link className="block" href={"/books"}>
-                                    Books We Read
-                                </Link>
-                            </Button>
-                            <Button
-                                asChild
-                                variant="ghost"
-                                className="hover:text-primary hover:bg-primary/10 transition-colors"
-                            >
-                                <Link className="block" href={"/reviewers/ella-mabini"}>
-                                    About Ella
-                                </Link>
-                            </Button>
-                            <Button
-                                asChild
-                                variant="ghost"
-                                className="hover:text-primary hover:bg-primary/10 transition-colors"
-                            >
-                                <Link className="block" href={"/reviewers/jamie-rebugio"}>
-                                    About Jamie
-                                </Link>
-                            </Button>
-                            <Button
-                                asChild
-                                variant="ghost"
-                                className="hover:text-primary hover:bg-primary/10 transition-colors"
-                            >
-                                <Link className="block" href={"/newsletter"}>
-                                    Newsletter
-                                </Link>
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <DesktopMenu />
         </header>
     )
 };
