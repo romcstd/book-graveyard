@@ -35,7 +35,7 @@ export default async function BookPage({ params }: BookPageProps) {
                 <div className="p-8 gap-0 bg-[#f0ebe6] mb-2">
                     <div className="relative aspect-[2/3] w-full max-w-72 h-auto mx-auto">
                         <Image
-                            src={book.image}
+                            src={book.cover}
                             alt={book.title}
                             fill
                             className="object-cover object-center"
@@ -43,7 +43,7 @@ export default async function BookPage({ params }: BookPageProps) {
                         />
                     </div>
                 </div>
-                <div className="text-muted-foreground font-serif italic mb-4">{book.imageDescription}</div>
+                <div className="text-muted-foreground font-serif italic mb-4">{book.coverDescription}</div>
 
                 <div className="font-serif grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
@@ -62,7 +62,7 @@ export default async function BookPage({ params }: BookPageProps) {
                                             <strong>Author:</strong> {book.author}
                                         </li>
                                         <li>
-                                            <strong>Genres:</strong> {book.genre?.join(", ")}
+                                            <strong>Genres:</strong> {book.genres?.join(", ")}
                                         </li>
                                         <li className="flex">
                                             <strong className="mr-1">Rating:</strong> {book.rating && <BookStarRating rating={book.rating} />}

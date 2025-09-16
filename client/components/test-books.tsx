@@ -22,7 +22,7 @@ export function TestBooks() {
         book.author.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesGenre = selectedGenre === "all" ||
-        (book.genre && book.genre.some(genre =>
+        (book.genres && book.genres.some(genre =>
           genre.toLowerCase() === selectedGenre.toLowerCase()
         ));
 
@@ -34,8 +34,8 @@ export function TestBooks() {
   const allGenres = useMemo(() => {
     const genreSet = new Set < string > ();
     books.forEach(book => {
-      if (book.genre) {
-        book.genre.forEach(genre => genreSet.add(genre));
+      if (book.genres) {
+        book.genres.forEach(genre => genreSet.add(genre));
       }
     });
     return Array.from(genreSet).sort();

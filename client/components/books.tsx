@@ -21,27 +21,30 @@ export function Books() {
     const handleLayout = useCallback((value: LayoutType) => setLayout(value), []);
 
     const filteredBooks: Book[] = useMemo(() => {
-        return books.filter((book: Book) => {
+        const result = books.filter((book: Book) => {
             const matchesSearch =
                 book.title.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
                 book.author.toLowerCase().includes(debouncedSearch.toLowerCase());
 
             const matchesGenre =
                 selectedGenre === "all" ||
-                (book.genre?.some(
+                (book.genres?.some(
                     genre => genre.toLowerCase() === selectedGenre.toLowerCase()
                 ));
 
             return matchesSearch && matchesGenre;
         });
+
+        return result.sort((a, b) => b.id - a.id);
+        
     }, [debouncedSearch, selectedGenre]);
 
     const allGenres = useMemo(() => {
         const genreSet = new Set<string>();
 
         books.forEach(book => {
-            if (book.genre) {
-                book.genre.forEach(genre =>
+            if (book.genres) {
+                book.genres.forEach(genre =>
                     genreSet.add(genre)
                 );
             }
@@ -54,7 +57,7 @@ export function Books() {
         <section className="relative">
             <div className="mb-8 text-center md:text-left">
                 <h2 className="font-playfair font-black text-4xl md:text-6xl text-primary mb-4">Books We Read</h2>
-                <p className="text-muted-foreground">Check out our book reviews and recommendations.</p>
+                <p className="font-serif text-muted-foreground">Check out our book reviews and recommendations.</p>
             </div>
             {/* Controls */}
             <BooksControls

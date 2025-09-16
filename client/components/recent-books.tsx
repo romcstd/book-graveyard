@@ -9,9 +9,14 @@ export function RecentBooks() {
                 <p className="text-muted-foreground">Check out our latest book reviews and recommendations.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {books.slice(-3).map((book) => (
-                    <BookCard key={book.id} book={book} />
-                ))}
+                {[...books]
+                    .filter((book) => book.status === "Completed")
+                    .sort((a, b) => b.id - a.id)
+                    .slice(0, 3)
+                    .map((book) => (
+                        <BookCard key={book.id} book={book} />
+                    ))
+                }
             </div>
         </section>
     )

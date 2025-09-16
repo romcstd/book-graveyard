@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Book } from "@/types/book";
 
 interface BookCardProps {
@@ -13,9 +14,17 @@ export const BookCard = memo(function BookCard({ book }: BookCardProps) {
     return (
         <Card className="p-0 transition-all duration-300 hover:-translate-y-2">
             <CardHeader className="p-4 gap-0 bg-zinc-100 rounded-tl-xl rounded-tr-xl">
+                {book.status && (
+                    <Badge
+                        variant={book.status === "Completed" ? "default" : "secondary"}
+                        className="relative shadow-md mb-2"
+                    >
+                        {book.status}
+                    </Badge>
+                )}
                 <div className="relative aspect-[2/3] w-full max-w-48 h-auto mx-auto">
                     <Image
-                        src={book.image || "/placeholder.jpg"}
+                        src={book.cover || "/placeholder.jpg"}
                         alt={book.title || "Untitled Book"}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -25,7 +34,7 @@ export const BookCard = memo(function BookCard({ book }: BookCardProps) {
             </CardHeader>
             <CardContent className="px-4">
                 <h3 className="font-serif font-bold text-xl mb-2">{book.title}</h3>
-                <p className="font-serif text-muted-foreground mb-4 uppercase">by by {book.author || "Unknown"}</p>
+                <p className="font-serif text-muted-foreground mb-4 uppercase">by {book.author || "Unknown"}</p>
                 <p className="font-serif text-muted-foreground leading-relaxed line-clamp-3">{book.description}</p>
             </CardContent>
             <CardFooter className="px-4 pb-4 mt-auto">
