@@ -25,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" app-version="0.1.8" suppressHydrationWarning>
+    <html lang="en" app-version="0.1.9" suppressHydrationWarning>
       <body
         className={`${playfairDisplay.variable} ${inter.variable} antialiased flex flex-col min-h-screen`}
       >
