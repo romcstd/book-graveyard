@@ -46,7 +46,7 @@ export function TestBookCard({ book, layout, index }: BookCardProps) {
             <div className={`relative overflow-hidden ${layout === 'rows' ? 'h-48 w-[140px] lg:w-[180px]' : 'h-56 w-full'}`}>
                 <div className="relative w-full h-full group">
                     <Image
-                        src={book.image}
+                        src={book.cover}
                         alt={`${book.title} cover`}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -75,7 +75,7 @@ export function TestBookCard({ book, layout, index }: BookCardProps) {
                         <FileText className="h-3 w-3" />
                         {book.pages} page
                     </Badge>
-                    {book.genre && book.genre.map((genre, index) => (
+                    {book.genres && book.genres.map((genre, index) => (
                         <Badge key={index} variant="secondary" className="flex items-center gap-1 text-xs">
                             <Tag className="h-3 w-3" />
                             {genre}

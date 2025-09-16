@@ -16,8 +16,8 @@ export function BooksControls({
     layout,
     setLayout,
 }: BooksControlsProps) {
-    const handleColumns = useCallback(() => setLayout("columns"), [setLayout])
-    const handleRows = useCallback(() => setLayout("rows"), [setLayout])
+    const handleColumns = useCallback(() => setLayout("columns"), [setLayout]);
+    const handleRows = useCallback(() => setLayout("rows"), [setLayout]);
     return (
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-8">
             {/* Search & Genre */}
